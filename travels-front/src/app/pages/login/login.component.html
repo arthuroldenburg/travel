@@ -4,23 +4,23 @@
     <input type="checkbox" id="chk" aria-hidden="true">
 
         <div class="signup">
-          <form>
+          <form #registerForm="ngForm" autocomplete="off" (ngSubmit)="onRegister()">
             <label for="chk" aria-hidden="true">sign up</label>
-            <input type="string" name="username" placeholder="username" required>
-            <input type="email" name="email" placeholder="email" required>
-            <input type="password" name="password" placeholder="password" required>
-            <input type="number" name="phone" placeholder="phone" required>
-            <input type="year" name="birthYear" placeholder="birth year">
-            <button>sign up</button>
+            <input type="string" name="username" placeholder="username" [(ngModel)]="user.username" required>
+            <input type="email" name="email" placeholder="email" [(ngModel)]="user.email" required>
+            <input type="password" name="password" placeholder="password" [(ngModel)]="user.password" required>
+            <input type="number" name="phone" placeholder="phone" [(ngModel)]="user.phone" required>
+            <input type="date" name="birthDate" [(ngModel)]="user.birthDate" required>
+            <button type="submit" [disabled]="!registerForm.form.valid">sign up</button>
           </form>
         </div>
 
         <div class="login">
-          <form>
+          <form #loginForm="ngForm" autocomplete="off" (ngSubmit)="onLogin()">
             <label for="chk" aria-hidden="true">login</label>
-            <input type="email" name="email" placeholder="email" required>
-            <input type="password" name="password" placeholder="password" required>
-            <button>login</button>
+            <input type="email" name="email" placeholder="email" [(ngModel)]="login.email" required>
+            <input type="password" name="password" placeholder="password" [(ngModel)]="login.password" required>
+            <button type="submit" [disabled]="!loginForm.form.valid">login</button>
           </form>
         </div>
     </div>

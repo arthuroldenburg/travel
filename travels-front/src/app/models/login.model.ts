@@ -8,6 +8,6 @@ export interface Register {
   email: string,
   password: string,
   phone: string,
-  birthYear: string,
+  birthDate: string,
   role: string
 }

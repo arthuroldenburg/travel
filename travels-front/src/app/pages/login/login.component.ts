@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import { Login, Register } from '../../models/login.model';
 import { AuthService } from '../../services/auth.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormBuilder, FormControl, FormsModule } from '@angular/forms';
+import { CommonModule, formatDate } from '@angular/common';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })
@@ -22,7 +23,7 @@ export class LoginComponent {
     password: '',
     username: '',
     phone: '',
-    birthYear: '',
+    birthDate: '',
     role: 'USER',
   };
 
@@ -39,12 +40,37 @@ export class LoginComponent {
     })
   }
 
+  xereca(){
+    console.log();
+
+    console.log("XERECAAAA")
+  }
+
   onRegister(){
+    this.checkIfAdm();
+    // this.checkBirthDate();
+    this.user.phone = this.user.phone.toString();
     this.authService.register(this.user).subscribe({
       next: (res:any) => {
+        console.log("RES: "+res);
 
       },
-      error: () => alert("WRONG! DO IT AGAIN")
+      error: (e) => console.log(e)
+
     })
+
   }
+
+  private checkIfAdm(){
+    if (this.user.email.split(/\@|\./)[1] === 'adm') this.user.role = 'ADMIN';
+  }
+
+  // private checkBirthDate(){
+  //   console.log(this.user.birthDate.split('-'));
+  //   const thisYear = new Date()
+  //   console.log(thisYear.getFullYear());
+  //   if(Number(this.user.birthDate.split('-')[0]) > thisYear.getFullYear()){
+  //     console.log(true);
+  //   }
+  // }
 }

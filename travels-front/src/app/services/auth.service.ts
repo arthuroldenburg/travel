@@ -7,15 +7,15 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class AuthService {
-  private url: string = 'http://localhost:8080/auth/';
+  private url: string = 'http://localhost:8080/auth';
 
-  constructor(private httpClient:HttpClient) {}
+  constructor(private httpClient: HttpClient) {}
 
-  login(login:Login): Observable<Login> {
-    return this.httpClient.post<Login>(this.url+'login', login);
+  login(login: Login): Observable<Login> {
+    return this.httpClient.post<Login>(`${this.url}/login`, login);
   }
 
-  register(data:Register): Observable<any> {
-    return this.httpClient.post<any>(this.url+'register', data);
+  register(data: Register): Observable<any> {
+    return this.httpClient.post<any>(`${this.url}/register`, data);
   }
 }
