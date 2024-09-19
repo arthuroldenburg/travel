@@ -16,7 +16,7 @@
 
   <div cdkDropList (cdkDropListDropped)="dropPrincipal($event)" class="card" style="background-image: url({{map.thumbnail}});">
     <h2 class="title">principals position to go</h2>
-    <p>select where you want to go first</p>
+    <p>sort by position you want to know first</p>
     <ul *ngFor="let pp of principal" cdkDrag>
       <li>{{pp}}</li>
     </ul>
@@ -24,7 +24,7 @@
 
   <div cdkDropList (cdkDropListDropped)="dropASite($event)" class="card" style="background-image: url({{map.site_images[0]}});">
     <h2 class="title">a site position to know</h2>
-    <p>select where you want to go first</p>
+    <p>sort by position you want to know first</p>
     <ul *ngFor="let a of map.a_site_places" cdkDrag>
       <li>{{a}}</li>
     </ul>
@@ -32,15 +32,15 @@
 
   <div cdkDropList (cdkDropListDropped)="dropMid($event)" class="card" style="background-image: url({{map.site_images[1]}});">
     <h2 class="title">mid position to know</h2>
-    <p>select where you want to go first</p>
+    <p>sort by position you want to know first</p>
     <ul *ngFor="let mid of map.mid_places" cdkDrag>
       <li>{{mid}}</li>
     </ul>
   </div>
 
   <div cdkDropList (cdkDropListDropped)="dropBSite($event)" class="card" style="background-image: url({{map.site_images[2]}});">
-    <h2 class="title">b site position know</h2>
-    <p>select where you want to go first</p>
+    <h2 class="title">b site position to know</h2>
+    <p>sort by position you want to know first</p>
     <ul *ngFor="let b of map.b_site_places" cdkDrag>
       <li>{{b}}</li>
     </ul>
