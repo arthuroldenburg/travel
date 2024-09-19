@@ -1,0 +1,50 @@
+<nav>
+  <h1>{{map.name}} stays in the country of {{map.country}}</h1>
+</nav>
+
+<div class="main">
+
+  <!-- <p>you can start the tourism in {{map.spawns[0]}} or {{map.spawns[1]}}</p> -->
+
+  <!-- <img src={{map.thumbnail}} alt=""> -->
+
+
+  <!-- <div cdkDropList (cdkDropListDropped)="drop($event)">
+    <h3>it have those principal places sites</h3>
+    <div *ngFor="let item of items" cdkDrag>{{item}}</div>
+  </div> -->
+
+  <div cdkDropList (cdkDropListDropped)="dropPrincipal($event)" class="card" style="background-image: url({{map.thumbnail}});">
+    <h2 class="title">principals position to go</h2>
+    <p>select where you want to go first</p>
+    <ul *ngFor="let pp of principal" cdkDrag>
+      <li>{{pp}}</li>
+    </ul>
+  </div>
+
+  <div cdkDropList (cdkDropListDropped)="dropASite($event)" class="card" style="background-image: url({{map.site_images[0]}});">
+    <h2 class="title">a site position to know</h2>
+    <p>select where you want to go first</p>
+    <ul *ngFor="let a of map.a_site_places" cdkDrag>
+      <li>{{a}}</li>
+    </ul>
+  </div>
+
+  <div cdkDropList (cdkDropListDropped)="dropMid($event)" class="card" style="background-image: url({{map.site_images[1]}});">
+    <h2 class="title">mid position to know</h2>
+    <p>select where you want to go first</p>
+    <ul *ngFor="let mid of map.mid_places" cdkDrag>
+      <li>{{mid}}</li>
+    </ul>
+  </div>
+
+  <div cdkDropList (cdkDropListDropped)="dropBSite($event)" class="card" style="background-image: url({{map.site_images[2]}});">
+    <h2 class="title">b site position know</h2>
+    <p>select where you want to go first</p>
+    <ul *ngFor="let b of map.b_site_places" cdkDrag>
+      <li>{{b}}</li>
+    </ul>
+  </div>
+
+</div>
+

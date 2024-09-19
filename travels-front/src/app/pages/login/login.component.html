@@ -3,7 +3,7 @@
   <div class="form">
     <input type="checkbox" id="chk" aria-hidden="true">
 
-        <div class="signup">
+        <!-- <div class="signup">
           <form #registerForm="ngForm" autocomplete="off" (ngSubmit)="onRegister()">
             <label for="chk" aria-hidden="true">sign up</label>
             <input type="string" name="username" placeholder="username" [(ngModel)]="user.username" required>
@@ -13,7 +13,7 @@
             <input type="date" name="birthDate" [(ngModel)]="user.birthDate" required>
             <button type="submit" [disabled]="!registerForm.form.valid">sign up</button>
           </form>
-        </div>
+        </div> -->
 
         <div class="login">
           <form #loginForm="ngForm" autocomplete="off" (ngSubmit)="onLogin()">
@@ -21,6 +21,13 @@
             <input type="email" name="email" placeholder="email" [(ngModel)]="login.email" required>
             <input type="password" name="password" placeholder="password" [(ngModel)]="login.password" required>
             <button type="submit" [disabled]="!loginForm.form.valid">login</button>
+            <button
+    type="button"
+    class="text-white ms-2 bg-gray-700 hover:bg-gray-800 font-medium rounded-lg w-full sm:w-auto px-5 py-2.5 text-center"
+    (click)="onClose()"
+  >
+    Cancel
+  </button>
           </form>
         </div>
     </div>

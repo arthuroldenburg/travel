@@ -1,1 +1,15 @@
-<p>home works!</p>
+<nav>
+  <h1>counter strike 2 destinations</h1>
+  <button type="button" (click)="openModel()"
+    class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-full px-6 py-3 text-center mb-2 ">
+    login
+  </button>
+</nav>
+<div class="main">
+  <div *ngFor="let place of places" class="card" style="background-image: url({{place.thumbnail}});" (click)="redirect(place)">
+      <h1 class="">{{place.name}}</h1>
+  </div>
+</div>
+<app-model [isOpen]="isModelOpen" (closeModel)="closeModel()">
+  <app-login (onCloseModel)="closeModel()"></app-login>
+</app-model>

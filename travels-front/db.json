@@ -1,0 +1,81 @@
+{
+    "places":[
+      {
+        "name": "mirage",
+        "country": "morocco",
+        "thumbnail":"https://assets.csnades.gg/mirage_background_da8357e787.webp",
+        "principal_places": ["ct", "a site", "palace", "stairs", "connector", "jungle", "ramp", "mid", "rat", "market", "aparments", "b site", "van"],
+        "a_site_places": ["ct", "ticket booth", "ninja", "trash", "triple box", "jungle", "stairs", "connector", "sandwich", "tetris", "ramp", "shadows", "palace", "balcony", "default"],
+        "b_site_places": ["market", "e box", "empty", "forest", "arches", "van", "b default", "aparments", "kitchen", "rat", "tv", "short"],
+        "mid_places": ["mid", "window", "moscow", "catwalk", "top mid", "mid boxes"],
+        "spawns": ["ct spawn", "t spawn"],
+        "site_images":["https://assets.csnades.gg/mirage_background_da8357e787.webp", "https://i.redd.it/a3jjilw53cta1.jpg", "https://blitz-cdn.blitz.gg/blitz/cs2/bombsites/mirage_b_site_2.webp"]
+      },
+      {
+        "name": "inferno",
+        "country": "italy",
+        "thumbnail": "https://arena.rtp.pt/wp-content/uploads/2023/09/cs2_Inferno_A-860x507-1.jpeg",
+        "principal_places": ["banana", "a site", ""],
+        "a_site_places": [],
+        "b_site_places": [],
+        "mid_places": ["bottom mid", "bench", "rat", "top mid", "false mid", "window", "balcony", "t ramp", "banana"],
+        "spawns": ["ct spawn", "t spawn"],
+        "site_images":[]
+      },
+      {
+        "name": "ancient",
+        "country": "mexico",
+        "thumbnail": "https://prosettings.net/cdn-cgi/image/dpr=1%2Cf=auto%2Cfit=cover%2Cgravity=auto%2Cheight=536%2Cq=85%2Cwidth=970/wp-content/uploads/ancient-1.jpg",
+        "principal_places": [],
+        "a_site_places": [],
+        "b_site_places": [],
+        "mid_places": [],
+        "spawns": ["ct spawn", "t spawn"],
+        "site_images": []
+      },
+      {
+        "name": "dust2",
+        "country": "morocco",
+        "thumbnail": "https://www.charlieintel.com/cdn-image/wp-content/uploads/2023/10/02/cs2-dust-2-smokes-grenades-flash-lineups-best-ct-t-mid-b-a-site.jpg?width=1920&quality=75&format=auto",
+        "principal_places": [],
+        "a_site_places": [],
+        "b_site_places": [],
+        "mid_places": [],
+        "spawns": ["ct spawn", "t spawn"],
+        "site_images": []
+      },
+      {
+        "name": "anubis",
+        "country": "egypt",
+        "thumbnail": "https://static.draft5.gg/news/2023/06/07112727/Anubis-CS2.jpg",
+        "principal_places": [],
+        "a_site_places": [],
+        "b_site_places": [],
+        "mid_places": [],
+        "spawns": ["ct spawn", "t spawn"],
+        "site_images": []
+      },
+      {
+        "name": "nuke",
+        "country": "germany",
+        "thumbnail": "https://preview.redd.it/nuke-cs1-vs-cs2-comparison-shots-v0-1rl0kalos29b1.png?width=640&crop=smart&auto=webp&s=782e75ecccb9fb623830cf1d0ca1f03c3a64c9c3",
+        "principal_places": [],
+        "a_site_places": [],
+        "b_site_places": [],
+        "mid_places": [],
+        "spawns": ["ct spawn", "t spawn"],
+        "site_images": []
+      },
+      {
+        "name": "vertigo",
+        "country": "united states of america",
+        "thumbnail": "https://staticg.sportskeeda.com/editor/2024/05/25730-17169323741418-1920.jpg",
+        "principal_places": [],
+        "a_site_places": [],
+        "b_site_places": [],
+        "mid_places": [],
+        "spawns": ["ct spawn", "t spawn"],
+        "site_images": []
+      }
+    ]
+}
