@@ -1,7 +1,6 @@
 package com.travels.travels.domain.travel;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,6 +13,8 @@ import lombok.Setter;
 @AllArgsConstructor
 @Table(name = "travel")
 public class Travel {
-    private Integer id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String id;
     private String[] spots;
 }

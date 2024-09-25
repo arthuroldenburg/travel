@@ -12,13 +12,13 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/travels")
+@RequestMapping("/a")
 public class TravelController {
     @Autowired
-    private TravelRepository tr;
+    TravelRepository tr;
 
     @GetMapping
     private ResponseEntity<List<Travel>> getAll(){
-        return ResponseEntity.ok().body(this.tr.findAll());
+        return ResponseEntity.ok().body(tr.findAll());
     }
 }
