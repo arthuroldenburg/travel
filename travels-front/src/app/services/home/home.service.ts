@@ -7,11 +7,11 @@ import { Place } from '../../models/place.model';
   providedIn: 'root',
 })
 export class HomeService {
-  private url = 'http://localhost:3000/places';
+  private url = 'https://dbjsontravels.onrender.com/places';
 
   constructor(private hc: HttpClient) {}
 
-  public getAll():Observable<Place[]> {
+  public getAll(): Observable<Place[]> {
     return this.hc.get<Place[]>(this.url);
   }
 }
